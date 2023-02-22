@@ -1,0 +1,342 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GAME CỜ VUA</title>
+</head>
+
+<link rel="stylesheet" type="text/css" href="CSS/style.css"/>
+<script type="text/javascript" src="JS/Sources.js"></script>
+<script type="text/javascript" src="JS/KhoiTao.js"></script>
+<script type="text/javascript" src="JS/Function.js"></script>
+
+<script>
+   
+  // myFunction();
+  // var array1 = new Array();  //mang nay chua cac o co the hien thi
+  // var array2 = new Array();  //mang nay chua cac o khong the hien thi
+  // var array3 = new Array();  //mang nay chua tat ca cac o trong ban co
+
+  // var allItems = document.getElementsByTagName("td");
+  // console.log(allItems[0].getAttribute('id'));
+
+	var clicks=0;
+	
+	function KhoiTao(){
+		VeBanCoTrangDen();
+    
+	}
+    // function Click(id){
+    //     var X = id.charAt(0);
+	// 	var Y = id.charAt(1);
+    //     hienthi(X,Y);
+    // }
+    // var manga = new Array();
+    // var mangb = new Array();
+  //   function Click(id){
+      
+  //        var a = id.charAt(0);
+	// 	     var b = id.charAt(1);
+  //        console.log("gia tri a "+a);
+  //        console.log("gia tri b "+b);
+
+  //      // hienthi(id);
+  //      // nuocdi(id, clicks);
+  //       // var mang = new Array();
+	//       // mang.push(id);
+	//       // console.log(mang);
+  //       clicks++;
+  //       console.log("click lan "+clicks);
+        
+  //       // const mang = new Array('?', '?', '?', '?', '?', '?', '?');
+  //       // mang = mang.push("d");
+  //       // console.log(mang);
+  //       // mang(7)=a;
+
+  //     for(i = 0; i < clicks; i++){
+          
+  //          if(manga[i] == a){
+  //          hienthi(id);
+
+  //          }
+  //        }
+  //       var i=0;
+
+
+  //       // do{
+  //       //    i++;
+  //       //   hienthi(id);
+  //       // } while(i<0);
+  //       // mang.splice(clicks, 0, " a ");
+  //       // console.log(mang);
+        
+
+  //       manga.push(a);
+  //       console.log(manga);
+  //       mangb.push(b);
+  //       console.log(mangb);
+
+  //         //for(a = 0; a < clicks; a++){
+         
+  //        //console.log("them gia tri vao mang "+mang[a]);
+  //       //  var X = mang[a].charAt(0);
+  //       //  var Y = mang[a].charAt(1);
+  //       //  console.log("x co gia tri "+X);
+  //       //  console.log("y co gia tri "+Y);
+  //       //   if(X!=a){
+  //       //     hienthi(id);
+
+  //       //  }
+
+
+  //       //  }
+        
+
+  //       // for(a = 0; a < clicks; a++){
+  //       //   for(b=1; b<clicks++; b++){
+  //       //     var X = mang[a].charAt(0);
+  //       //     var Y = mang[b].charAt(1);
+  //       //     if(X==Y){
+  //       //       console.log("cung hang");
+  //       //     }
+
+  //       //   } 
+  //       // }
+  
+
+
+  // }
+
+  
+
+  // function Click(id){
+  //   clicks++;
+  //   let flag =0;
+  //   var a = id.charAt(0);
+	// 	var b = id.charAt(1);
+  //   if(clicks==1){
+  //     hienthi(id);
+  //     manga.push(a);
+  //     mangb.push(b);
+  //     console.log(manga);
+  //     console.log(mangb);
+  //   }
+   
+  //   if(clicks > 1){ 
+      
+  //     for(i=0; i<manga.length ; i++){
+       
+  //         if(manga[i]==a ){
+  //           hienthi(id);
+  //           manga.push(a);
+            
+          
+  //         }
+
+         
+  //       }
+
+  //     } 
+  //     }
+      
+     
+      
+ var manga = new Array();
+ var mangb = new Array();
+  function Click(id){
+    var a = id.charAt(0);
+	  var b = id.charAt(1);
+    //console.log('click lan '+clicks);
+    clicks++;
+    
+    if(clicks == 1){
+    manga.push(a);
+    mangb.push(b);
+   // console.log(manga);
+  //console.log(mangb);
+    hienthi(id);
+    clicks++;
+    }
+    else{
+      if(checkOK(a,b)==false){
+       // manga.push(a);
+       // hienthi(id);
+       confirm('sai rồi em zai!!!')
+      }
+      else{
+        manga.push(a);
+        hienthi(id);
+        mangb.push(b);
+       // console.log(manga);
+      
+      }
+  }
+ }
+ function checkOK(a,b){
+   
+   //console.log(manga[0]);
+   let cong = 0;
+   for( i=0; i< manga.length; i++){
+    
+    if(manga[i]==a || mangb[i]==b || (manga[i]-mangb[i])==(a-b)||(manga[i]+mangb[i])==(a+b)){
+      return false;
+      break;
+    }
+   }
+ }
+
+
+  
+  
+  
+
+ // var score = [7, 8, 9, 10,3];
+ 
+// function checkPass(score) {
+//     return score >= 5;
+// }
+ 
+// function myFunction() {
+//     if (score.every(checkPass) == true) {
+//         document.getElementById("demo").innerHTML = 'Đủ điểm đỗ!';
+//     }else{
+//         document.getElementById("demo").innerHTML = 'không đủ điểm đỗ!';
+//     }
+// }
+ // var check = manga.every(a => a>0)
+
+ // duyet mang 
+//  
+
+
+
+  // function Click(id) {
+  //   var a = id.charAt(0);
+	// 	var b = id.charAt(1);
+
+  //   if (checkOK(a, b)) {
+  //     console.log("trigger")
+  //     chieuNgang.push(a);
+  //     chieuDoc.push(b);
+  //     console.log(chieuNgang);
+  //     console.log(chieuDoc);
+  //     console.log("khong them duoc")
+  //   }
+  // }
+
+  // function checkOK(a, b) {
+  //   for (i = 0; i < chieuNgang.length; i++) {
+  //     console.log("chieu doc click " + a);
+  //     console.log("chieu doc click " + b);
+  //     console.log(chieuNgang);
+  //     console.log(chieuDoc);
+  //     console.log("index mang " + i);
+  //    if (chieuNgang[i] == a) {
+  //     return false;
+  //    }
+  //   }
+  //   return true;
+  // }
+
+
+
+
+</script>
+
+<body onload="KhoiTao()">
+
+<div id="divMain">
+	
+
+	
+        <table id="BanCo">
+            <tr>
+                <td id="11" onclick="Click(this.id)"><img id="i11"/></td>
+                <td id="12" onclick="Click(this.id)"><img id="i12"/></td>
+                <td id="13" onclick="Click(this.id)"><img id="i13"/></td>
+                <td id="14" onclick="Click(this.id)"><img id="i14"/></td>
+                <td id="15" onclick="Click(this.id)"><img id="i15"/></td>
+                <td id="16" onclick="Click(this.id)"><img id="i16"/></td>
+                <td id="17" onclick="Click(this.id)"><img id="i17"/></td>
+                <td id="18" onclick="Click(this.id)"><img id="i18"/></td>
+              </tr>
+              <tr>
+                <td id="21" onclick="Click(this.id)"><img id="i21"/></td>
+                <td id="22" onclick="Click(this.id)"><img id="i22"/></td>
+                <td id="23" onclick="Click(this.id)"><img id="i23"/></td>
+                <td id="24" onclick="Click(this.id)"><img id="i24"/></td>
+                <td id="25" onclick="Click(this.id)"><img id="i25"/></td>
+                <td id="26" onclick="Click(this.id)"><img id="i26"/></td>
+                <td id="27" onclick="Click(this.id)"><img id="i27"/></td>
+                <td id="28" onclick="Click(this.id)"><img id="i28"/></td>
+              </tr>
+              <tr>
+                <td id="31" onclick="Click(this.id)"><img id="i31"/></td>
+                <td id="32" onclick="Click(this.id)"><img id="i32"/></td>
+                <td id="33" onclick="Click(this.id)"><img id="i33"/></td>
+                <td id="34" onclick="Click(this.id)"><img id="i34"/></td>
+                <td id="35" onclick="Click(this.id)"><img id="i35"/></td>
+                <td id="36" onclick="Click(this.id)"><img id="i36"/></td>
+                <td id="37" onclick="Click(this.id)"><img id="i37"/></td>
+                <td id="38" onclick="Click(this.id)"><img id="i38"/></td>
+              </tr>
+              <tr>
+                <td id="41" onclick="Click(this.id)"><img id="i41"/></td>
+                <td id="42" onclick="Click(this.id)"><img id="i42"/></td>
+                <td id="43" onclick="Click(this.id)"><img id="i43"/></td>
+                <td id="44" onclick="Click(this.id)"><img id="i44"/></td>
+                <td id="45" onclick="Click(this.id)"><img id="i45"/></td>
+                <td id="46" onclick="Click(this.id)"><img id="i46"/></td>
+                <td id="47" onclick="Click(this.id)"><img id="i47"/></td>
+                <td id="48" onclick="Click(this.id)"><img id="i48"/></td>
+              </tr>
+              <tr>
+                <td id="51" onclick="Click(this.id)"><img id="i51"/></td>
+                <td id="52" onclick="Click(this.id)"><img id="i52"/></td>
+                <td id="53" onclick="Click(this.id)"><img id="i53"/></td>
+                <td id="54" onclick="Click(this.id)"><img id="i54"/></td>
+                <td id="55" onclick="Click(this.id)"><img id="i55"/></td>
+                <td id="56" onclick="Click(this.id)"><img id="i56"/></td>
+                <td id="57" onclick="Click(this.id)"><img id="i57"/></td>
+                <td id="58" onclick="Click(this.id)"><img id="i58"/></td>
+              </tr>
+              <tr>
+                <td id="61" onclick="Click(this.id)"><img id="i61"/></td>
+                <td id="62" onclick="Click(this.id)"><img id="i62"/></td>
+                <td id="63" onclick="Click(this.id)"><img id="i63"/></td>
+                <td id="64" onclick="Click(this.id)"><img id="i64"/></td>
+                <td id="65" onclick="Click(this.id)"><img id="i65"/></td>
+                <td id="66" onclick="Click(this.id)"><img id="i66"/></td>
+                <td id="67" onclick="Click(this.id)"><img id="i67"/></td>
+                <td id="68" onclick="Click(this.id)"><img id="i68"/></td>
+              </tr>
+              <tr>
+                <td id="71" onclick="Click(this.id)"><img id="i71"/></td>
+                <td id="72" onclick="Click(this.id)"><img id="i72"/></td>
+                <td id="73" onclick="Click(this.id)"><img id="i73"/></td>
+                <td id="74" onclick="Click(this.id)"><img id="i74"/></td>
+                <td id="75" onclick="Click(this.id)"><img id="i75"/></td>
+                <td id="76" onclick="Click(this.id)"><img id="i76"/></td>
+                <td id="77" onclick="Click(this.id)"><img id="i77"/></td>
+                <td id="78" onclick="Click(this.id)"><img id="i78"/></td>
+              </tr>
+              <tr>
+                <td id="81" onclick="Click(this.id)"><img id="i81"/></td>
+                <td id="82" onclick="Click(this.id)"><img id="i82"/></td>
+                <td id="83" onclick="Click(this.id)"><img id="i83"/></td>
+                <td id="84" onclick="Click(this.id)"><img id="i84"/></td>
+                <td id="85" onclick="Click(this.id)"><img id="i85"/></td>
+                <td id="86" onclick="Click(this.id)"><img id="i86"/></td>
+                <td id="87" onclick="Click(this.id)"><img id="i87"/></td>
+                <td id="88" onclick="Click(this.id)"><img id="i88"/></td>
+              </tr>
+        </table>
+    </div>
+		
+   
+    	</table>
+    </div>
+</div> 
+
+</body>
+</html>
